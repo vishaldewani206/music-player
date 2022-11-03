@@ -109,3 +109,5 @@ songSlider.addEventListener('input', () => {
   clearInterval(timer);
   songForward = true;
 });
+
+console.log('fuck you i am in ADDINGSONGS branch');
