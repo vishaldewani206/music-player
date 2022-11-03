@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+
+    <script src="app.js" defer></script>
+    <title>Music Player</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="heading">
+        <h1>Music Player</h1>
+      </div>
+      <main>
+        <div class="player">
+          <div class="controller">
+            <div class="slider">
+              <input
+                type="range"
+                id="slider_btn"
+                min="0"
+                max="100"
+                step="1"
+                value="0"
+              />
+              <div class="time">
+                <p class="starting_time">00:00</p>
+                <p class="ending_time">00:00</p>
+              </div>
+            </div>
+            <div class="volume_icon">
+              <img
+                src="images/volume-high-solid.svg"
+                alt="volume icon"
+                class="volume_img"
+              />
+            </div>
+            <div class="volume">
+              <input
+                type="range"
+                id="volume_range"
+                min="0"
+                max="1"
+                step="0.01"
+                value=".2"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="songs"></div>
+      </main>
+      <div class="control_btns">
+        <div class="hamburger">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+        </div>
+        <div class="playPause">
+          <img src="images/image.png" alt="" class="arrows" />
+          <div class="play">
+            <img src="images/pause.png" alt="" class="on" />
+          </div>
+          <img src="images/right-arrow.png" alt="" class="arrows" />
+        </div>
+        <img src="images/exchange.png" alt="" />
+      </div>
+    </div>
+  </body>
+</html>

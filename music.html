@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button id="play">play</button>
+    <br />
+    <input type="range" id="volumeRange" min="0" max="1" step="0.01" />
+    <script>
+      let play = document.querySelector('#play');
+      let audio = new Audio('songs/Akon - Right Now (Na Na Na) (Lyrics).mp3');
+      let i = true;
+      function songs() {
+        if (i) {
+          audio.play();
+          play.innerHTML = 'pause';
+          console.log(audio.volume);
+          i = false;
+        } else {
+          audio.pause();
+          play.innerHTML = 'play';
+          i = true;
+        }
+      }
+      play.addEventListener('click', songs);
+      let volumeRange = document.querySelector('#volumeRange');
+      volumeRange.addEventListener('input', () => {
+        audio.volume = volumeRange.value;
+      });
+    </script>
+  </body>
+</html>
