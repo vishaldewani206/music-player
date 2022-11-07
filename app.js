@@ -131,7 +131,7 @@ songSlider.addEventListener('input', () => {
   songForward = true;
 });
 
-console.log('fuck you i am in ADDINGSONGS branch');
+console.log('fuck the other branch');
 
 //hamburger
 //display song playlist
