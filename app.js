@@ -62,8 +62,8 @@ function playAndPause() {
     //volume length
     let length = audioCtx.duration;
 
-    let minutes = Math.round(length / 60);
-    let seconds = Math.round(length % 60);
+    let minutes = Math.trunc(length / 60);
+    let seconds = Math.trunc(length % 60);
 
     //duration of song in html
 
@@ -102,8 +102,8 @@ function startingTime() {
   if (songSlider.value == 100) {
     nextSong();
   }
-  startingSeconds = Math.round(audioCtx.currentTime % 60);
-  startingMinutes = Math.floor(audioCtx.currentTime / 60);
+  startingSeconds = Math.trunc(audioCtx.currentTime % 60);
+  startingMinutes = Math.trunc(audioCtx.currentTime / 60);
 
   if (startingSeconds > 59) {
     startingSeconds = 0;
@@ -124,7 +124,7 @@ function startingTime() {
 
 //songslider forwarding
 songSlider.addEventListener('input', () => {
-  currenttime = Math.round((songSlider.value * length) / 100);
+  currenttime = Math.trunc((songSlider.value * length) / 100);
 
   //song pause
   play.src = 'images/pause.png';
