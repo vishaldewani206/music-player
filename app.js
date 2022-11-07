@@ -99,6 +99,9 @@ let starting = document.querySelector('.starting_time');
 
 let length;
 function startingTime() {
+  if (songSlider.value == 100) {
+    nextSong();
+  }
   startingSeconds = Math.round(audioCtx.currentTime % 60);
   startingMinutes = Math.floor(audioCtx.currentTime / 60);
 
