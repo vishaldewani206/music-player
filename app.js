@@ -131,8 +131,6 @@ songSlider.addEventListener('input', () => {
   songForward = true;
 });
 
-console.log('fuck the other branch');
-
 //hamburger
 //display song playlist
 let songPlaylist = document.querySelector('.songs');

@@ -268,4 +268,15 @@ main {
   .control_btns {
     width: 95%;
   }
+  .volume {
+    display: flex;
+  }
+  main,
+  .player,
+  .songs {
+    height: 425px;
+  }
+  .songName {
+    font-size: 0.8rem;
+  }
 }
