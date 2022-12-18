@@ -1,3 +1,10 @@
+//animation wait
+document.body.className += ' js-loading';
+window.addEventListener('load', showPage, false);
+function showPage() {
+  document.body.className = document.body.className.replace('js-loading', '');
+}
+
 function pad(unit) {
   return unit < 10 ? '0' + unit : unit;
   unit = unit.toString();

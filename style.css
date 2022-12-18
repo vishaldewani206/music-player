@@ -8,12 +8,18 @@
   box-sizing: border-box;
   user-select: none;
 }
+.js-loading *,
+.js-loading *::after,
+.js-loading *::before {
+  animation-play-state: paused !important;
+}
 body {
   width: 100vw;
   height: 100vh;
   background-image: url('images/background.jpg');
   background-size: cover;
 }
+
 .container {
   width: 100vw;
   height: 100vh;
@@ -35,6 +41,9 @@ main {
 }
 .heading {
   margin-bottom: 2em;
+  transform: scale(0.8);
+  opacity: 0;
+  animation: zoom-in 1s cubic-bezier(0, 0.75, 0, 1.11) forwards;
 }
 .heading h1 {
   font-size: 3rem;
@@ -54,8 +63,16 @@ main {
   background: rgba(255, 255, 255, 0.192);
   backdrop-filter: blur(40px);
   border-radius: 40px;
-
   padding: 20px;
+  transform: scale(0.8);
+  opacity: 0;
+  animation: zoom-in 1s 0.3s cubic-bezier(0, 0.75, 0, 1.11) forwards;
+}
+@keyframes zoom-in {
+  100% {
+    opacity: 1;
+    transform: none;
+  }
 }
 .songs {
   display: flex;
@@ -105,10 +122,12 @@ main {
   height: 10%;
   min-height: 70px;
   background: rgba(255, 255, 255, 0.192);
-
   backdrop-filter: blur(30px);
   border-radius: 25px;
   margin-top: 2em;
+  transform: scale(0.8);
+  opacity: 0;
+  animation: zoom-in 1s 0.5s cubic-bezier(0, 0.75, 0, 1.11) forwards;
 }
 .controller {
   width: 100%;
